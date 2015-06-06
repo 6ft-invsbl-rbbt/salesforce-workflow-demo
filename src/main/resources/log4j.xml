@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+<!-- Required to initialize the log4j simply -->
+    <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <!--<param name="ConversionPattern" value="%d{ISO8601} [%t] %-5p %c%n %m%n"/>-->
+            <param name="ConversionPattern" value="%d{ISO8601} [%t] %-5p %l %c%n %m%n"/>
+        </layout>
+    </appender>
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="consoleAppender" />
+    </root>
+
+</log4j:configuration>
